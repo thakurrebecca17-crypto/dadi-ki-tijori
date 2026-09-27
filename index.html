@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dadi Ki Tijori — Har bite mein ghar ki yaad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="brand"><img src="images/logo.jpg" alt="Dadi Ki Tijori logo">Dadi Ki Tijori</div>
+    <nav><ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#flavours">Flavours</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#campaign">Campaign</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <div class="navRight">
+      <button class="cartBtn" onclick="openCart()">🗝️<span class="cartCount" id="cartCount">0</span></button>
+      <button class="hamburger" onclick="document.querySelector('.mobileNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobileNav">
+    <a href="#home" onclick="closeMobile()">Home</a>
+    <a href="#story" onclick="closeMobile()">Our Story</a>
+    <a href="#flavours" onclick="closeMobile()">Flavours</a>
+    <a href="#shop" onclick="closeMobile()">Shop</a>
+    <a href="#campaign" onclick="closeMobile()">Campaign</a>
+    <a href="#feedback" onclick="closeMobile()">Feedback</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="floaters">
+    <span style="top:12%;left:6%;animation-delay:0s;">🥭</span>
+    <span style="top:70%;left:10%;animation-delay:2s;">🌶️</span>
+    <span style="top:20%;left:88%;animation-delay:1s;">🍋</span>
+    <span style="top:75%;left:85%;animation-delay:3s;">🌿</span>
+  </div>
+  <div class="wrap heroGrid">
+    <div class="reveal in">
+      <h1>The taste of home,<br>kept like a treasure.</h1>
+      <p class="sub">Traditional Indian pickles, reimagined for today.</p>
+      <div class="heroBtns">
+        <a href="#shop" class="btn btnPrimary">Shop the Tijori</a>
+        <a href="#flavours" class="btn btnGhost">Explore Flavours</a>
+      </div>
+    </div>
+    <div class="heroImgWrap reveal in d2"><img src="images/hero.jpg" alt="Dadi Ki Tijori pickle jar"></div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <h2 class="reveal">Some recipes are inherited.<br>Some are treasured.</h2>
+    <p class="reveal d1">Dadi Ki Tijori was inspired by the timeless tradition of homemade Indian pickles — flavours passed down through generations and treasured in every family. The Tijori represents something precious that is carefully kept and protected. We took that idea and turned it into a modern pickle brand that celebrates traditional taste while making it part of everyday life.</p>
+    <div class="journey">
+      <div class="step"><div class="dot">🏠</div><span>Home Kitchen</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="dot">🫙</div><span>Pickle</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="dot">🗝️</div><span>Treasure</span></div>
+      <div class="arrow">→</div>
+      <div class="step"><div class="dot">👵</div><span>Dadi Ki Tijori</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="flavours">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>A flavour for every memory</h2><p>Four flavours. One treasured tradition.</p></div>
+    <div class="flavGrid">
+      <div class="flip reveal" onclick="this.classList.toggle('flipped')">
+        <div class="flipInner">
+          <div class="flipFace flipFront"><img src="images/aam.jpg" alt="Aam Ki Tijori"><div class="fInfo"><h3>Aam Ki Tijori</h3><small>Mango Pickle</small></div><div class="tap">HOVER / TAP TO DISCOVER</div></div>
+          <div class="flipFace flipBack"><p><strong>Classic. Bold. Nostalgic.</strong>A familiar mango pickle that instantly brings the taste of home to the table.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal d1" onclick="this.classList.toggle('flipped')">
+        <div class="flipInner">
+          <div class="flipFace flipFront"><img src="images/nimbu.jpg" alt="Nimbu Ki Tijori"><div class="fInfo"><h3>Nimbu Ki Tijori</h3><small>Lemon Pickle</small></div><div class="tap">HOVER / TAP TO DISCOVER</div></div>
+          <div class="flipFace flipBack"><p><strong>Tangy. Bright. Refreshing.</strong>A sharper, zesty flavour for people who love a little extra kick with their meals.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal d2" onclick="this.classList.toggle('flipped')">
+        <div class="flipInner">
+          <div class="flipFace flipFront"><img src="images/mirchi.jpg" alt="Mirchi Ki Tijori"><div class="fInfo"><h3>Mirchi Ki Tijori</h3><small>Chilli Pickle</small></div><div class="tap">HOVER / TAP TO DISCOVER</div></div>
+          <div class="flipFace flipBack"><p><strong>Bold. Spicy. Unapologetic.</strong>For people who like their pickle with a little heat and a lot of flavour.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal d3" onclick="this.classList.toggle('flipped')">
+        <div class="flipInner">
+          <div class="flipFace flipFront"><img src="images/mixed.jpg" alt="Mixed Tijori"><div class="fInfo"><h3>Mixed Tijori</h3><small>Mixed Pickle</small></div><div class="tap">HOVER / TAP TO DISCOVER</div></div>
+          <div class="flipFace flipBack"><p><strong>Colourful. Complex.</strong>A little bit of everything, bringing different textures and tastes into one jar.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>Open your Tijori</h2><p>Choose your jar. Pick your flavour. Bring home a little taste of tradition.</p></div>
+    <div class="prodGrid" id="prodGrid"></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>Price to be treasured</h2><p>Premium feel. Everyday affordability.</p></div>
+    <div class="priceGrid">
+      <div class="priceCard reveal"><div class="tag">TRIAL</div><div class="amt">₹59</div>100g</div>
+      <div class="priceCard reveal d1"><div class="tag">REGULAR</div><div class="amt">₹129</div>250g</div>
+      <div class="priceCard reveal d2"><div class="tag">FAMILY</div><div class="amt">₹229</div>500g</div>
+      <div class="priceCard reveal d3"><div class="tag">TIJORI COMBO</div><div class="amt">₹349</div>3 × 250g</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--beige)">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>How to order</h2></div>
+    <div class="stepsRow">
+      <div class="stepCard reveal"><div class="num">01</div><h4>Discover</h4><p>Explore our flavours.</p></div>
+      <div class="stepCard reveal d1"><div class="num">02</div><h4>Choose</h4><p>Pick your favourite Tijori.</p></div>
+      <div class="stepCard reveal d2"><div class="num">03</div><h4>Order</h4><p>Order through WhatsApp or email.</p></div>
+      <div class="stepCard reveal d3"><div class="num">04</div><h4>Enjoy</h4><p>Open your jar and bring home the taste.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="campaign" id="campaign">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>Build Trust</h2><p>Experiential & Community</p></div>
+    <div class="campGrid">
+      <div class="campCard reveal"><h4>Pickle-Making Workshop</h4><p>A hands-on weekend session in small local groups — participants make their own jar and take it home.</p><span class="cta">LEARN. MAKE. TAKE HOME.</span></div>
+      <div class="campCard reveal d1"><h4>Street Food Cart Collab</h4><p>A limited-time Dadi Ki Tijori × Vada Pav special, introducing our pickle through an existing local food community.</p><span class="cta">SAME TASTE. NEW PLACES.</span></div>
+      <div class="campCard reveal d2"><h4>Recipe Card & QR</h4><p>Every purchase includes a QR to "5 Ways to Use Our Pickle" — sandwiches, rice, salads, paratha, wraps.</p><span class="cta">BEYOND ROTI-SABZI</span></div>
+      <div class="campCard reveal d3"><h4>Community Vibe</h4><p>Built through WhatsApp groups, reviews and word of mouth. Real people, real flavours, real moments.</p><span class="cta">HAVE YOU TRIED IT?</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="bingo">
+  <div class="wrap bingoWrap">
+    <div class="sHead reveal"><h2>How do you like your achaar?</h2></div>
+    <div class="bingoGrid" id="bingoGrid"></div>
+    <div class="bingoShare">Screenshot & share · Tag @dadikitijori</div>
+  </div>
+</section>
+
+<section class="shop" id="feedback">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>Tell us what's in your Tijori</h2><p>Your feedback helps us make every jar better.</p></div>
+    <div id="fbWrap">
+      <form class="fbForm" id="fbForm" onsubmit="return submitFeedback(event)">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <select required>
+          <option value="" disabled selected>Favourite flavour</option>
+          <option>Aam Ki Tijori</option><option>Nimbu Ki Tijori</option><option>Mirchi Ki Tijori</option><option>Mixed Tijori</option>
+        </select>
+        <div class="stars" id="stars">
+          <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+        </div>
+        <textarea placeholder="Your feedback" rows="4" required></textarea>
+        <button class="btn btnPrimary" type="submit">Lock It In 🗝️</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="instaSec">
+  <div class="wrap">
+    <h2 class="reveal serif" style="color:var(--green);font-size:2rem;">Follow the Tijori</h2>
+    <p class="reveal d1" style="color:var(--brown);margin:14px auto 26px;max-width:480px;">See what's cooking, what's being opened and what our community is loving.</p>
+    <a class="btn btnPrimary reveal d2" href="https://www.instagram.com/dadikitijori?stkn=MTFhaHEydzZ1Y2l6Yg==" target="_blank" rel="noopener">Follow us on Instagram</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sHead reveal"><h2>From our Tijori to your table.</h2></div>
+    <div class="contactGrid">
+      <a class="contactCard reveal" href="tel:+919892514051"><div class="ic">📞</div><h5>Call</h5>9892514051</a>
+      <a class="contactCard reveal d1" href="https://wa.me/919892514051" target="_blank"><div class="ic">💬</div><h5>WhatsApp</h5>9892514051</a>
+      <a class="contactCard reveal d2" href="mailto:dadikitijori@gmail.com"><div class="ic">✉️</div><h5>Email</h5>dadikitijori@gmail.com</a>
+      <a class="contactCard reveal d3" href="https://www.instagram.com/dadikitijori?stkn=MTFhaHEydzZ1Y2l6Yg==" target="_blank"><div class="ic">📷</div><h5>Instagram</h5>@dadikitijori</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 class="serif">Dadi Ki Tijori</h3>
+    <div class="tagline">"Har bite mein ghar ki yaad."</div>
+    <div class="footNav">
+      <a href="#home">Home</a><a href="#story">Our Story</a><a href="#flavours">Flavours</a><a href="#shop">Shop</a><a href="#campaign">Campaign</a><a href="#feedback">Feedback</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footSocial">
+      <a href="https://www.instagram.com/dadikitijori?stkn=MTFhaHEydzZ1Y2l6Yg==" target="_blank">Instagram</a>
+      <a href="https://wa.me/919892514051" target="_blank">WhatsApp</a>
+      <a href="mailto:dadikitijori@gmail.com">Email</a>
+    </div>
+    <div class="fine">TRADITIONAL TASTE. TIMELESS MEMORIES.</div>
+  </div>
+</footer>
+
+<!-- cart drawer -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawerHead"><h3>Your Tijori</h3><button class="drawerClose" onclick="closeCart()">✕</button></div>
+  <div class="drawerItems" id="drawerItems"></div>
+  <div class="drawerFoot">
+    <div class="totalRow"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <div class="orderOpts">
+      <a class="btn waBtn" id="waOrderBtn" target="_blank">Place Order & Confirm on WhatsApp</a>
+      <a class="btn emailBtn" id="emailOrderBtn">Order via Email</a>
+      <button class="btn formBtn" onclick="openForm()">Fill Online Order Form</button>
+    </div>
+  </div>
+</div>
+
+<!-- order form modal -->
+<div class="modalOverlay" id="modalOverlay">
+  <div class="modalBox">
+    <button class="modalClose" onclick="closeForm()">✕</button>
+    <h3>Open Your Tijori</h3>
+    <div id="formArea">
+      <form id="orderForm" onsubmit="return submitForm(event)">
+        <input type="text" id="ofName" placeholder="Name" required>
+        <input type="tel" id="ofPhone" placeholder="Phone" required>
+        <input type="email" id="ofEmail" placeholder="Email" required>
+        <input type="text" id="ofAddress" placeholder="Address" required>
+        <input type="text" id="ofCity" placeholder="City" required>
+        <input type="text" id="ofPincode" placeholder="Pincode" required>
+        <textarea id="ofNotes" placeholder="Notes (optional)" rows="2"></textarea>
+        <button class="btn btnPrimary" type="submit">Submit Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
